@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-graduation-cap"></i> Student Hub</h1>
+            <p>Manage your students seamlessly</p>
+        </header>
+
+        <main class="dashboard">
+            <section class="form-section glass">
+                <h2 id="form-title">Add New Student</h2>
+                <form id="student-form">
+                    <input type="hidden" id="student-id">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="name" required placeholder="e.g. John Doe">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="age">Age</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <input type="number" id="age" required placeholder="e.g. 21" min="1">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="course">Course Details</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-book"></i>
+                            <input type="text" id="course" required placeholder="e.g. Computer Science">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="save-btn" class="btn primary-btn"><i class="fa-solid fa-plus"></i> Add Student</button>
+                        <button type="button" id="cancel-btn" class="btn secondary-btn hidden"><i class="fa-solid fa-xmark"></i> Cancel</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="list-section">
+                <h2>Enrolled Students</h2>
+                <div class="student-grid" id="student-list">
+                    <!-- Cards will be populated here by JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
